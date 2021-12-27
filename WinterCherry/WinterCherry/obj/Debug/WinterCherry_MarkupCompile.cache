@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\MrBoring\source\repos\WinterCherry\WinterCherry\obj\Debug\
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\
 WinterCherry
 none
 false
 DEBUG;TRACE
-C:\Users\MrBoring\source\repos\WinterCherry\WinterCherry\App.xaml
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\App.xaml
 91532281257
 
 351671239640
-24355707624
+241486811697
 Windows\AdministratorWindow.xaml;Windows\AmountIceCream.xaml;Windows\DeliveryToShopWindow.xaml;Windows\DeliveryToStorageWindow.xaml;Windows\IceCreamWindow.xaml;Windows\InventoryWindow.xaml;Windows\LoginWindow.xaml;Windows\CheckoutWindow.xaml;Windows\ProductsControl.xaml;
 
 False

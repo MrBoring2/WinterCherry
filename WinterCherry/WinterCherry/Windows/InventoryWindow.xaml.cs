@@ -118,55 +118,64 @@ namespace WinterCherry.Windows
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Spend_Click(object sender, RoutedEventArgs e)
+        private async Task Export()
         {
-            InventoryModels = new ObservableCollection<InventoryModel>(InventoryModels.OrderBy(p => p.IceCream.Id));
-            var application = new Excel.Application();
-            application.SheetsInNewWorkbook = 1;
-            Excel.Workbook workbook = application.Workbooks.Add(Type.Missing);
-            int startRowIndex = 1;
-            Excel.Worksheet worksheet = application.Worksheets.Item[1];
-            worksheet.Name = "Инвентаризация";
-            worksheet.Cells[1][startRowIndex] = "№";
-            worksheet.Cells[2][startRowIndex] = "Название";
-            worksheet.Cells[3][startRowIndex] = "Количество фактическое";
-            worksheet.Cells[4][startRowIndex] = "Количество учётное";
-            worksheet.Cells[5][startRowIndex] = "Отклонение";
-            worksheet.Cells[6][startRowIndex] = "Цена";
-            worksheet.Cells[7][startRowIndex] = "Стоимость фактическая";
-            worksheet.Cells[8][startRowIndex] = "Стоимость учётная";
-            startRowIndex++;
-
-            foreach (var inventoryModel in InventoryModels)
+            await Task.Run(() =>
             {
-                worksheet.Cells[1][startRowIndex] = inventoryModel.IceCream.Id;
-                worksheet.Cells[2][startRowIndex] = inventoryModel.IceCream.Name;
-                worksheet.Cells[3][startRowIndex] = inventoryModel.FactAmount;
-                worksheet.Cells[4][startRowIndex] = inventoryModel.BuhAmount;
-                worksheet.Cells[5][startRowIndex] = inventoryModel.Deviation;
-                worksheet.Cells[6][startRowIndex] = inventoryModel.Price;
-                worksheet.Cells[7][startRowIndex] = inventoryModel.FactTotalPrice;
-                worksheet.Cells[8][startRowIndex] = inventoryModel.BuhTotalPrice;
+                InventoryModels = new ObservableCollection<InventoryModel>(InventoryModels.OrderBy(p => p.IceCream.Id));
+                var application = new Excel.Application();
+                application.SheetsInNewWorkbook = 1;
+                Excel.Workbook workbook = application.Workbooks.Add(Type.Missing);
+                int startRowIndex = 1;
+                Excel.Worksheet worksheet = application.Worksheets.Item[1];
+                worksheet.Name = "Инвентаризация";
+                worksheet.Cells[1][startRowIndex] = "№";
+                worksheet.Cells[2][startRowIndex] = "Название";
+                worksheet.Cells[3][startRowIndex] = "Количество фактическое";
+                worksheet.Cells[4][startRowIndex] = "Количество учётное";
+                worksheet.Cells[5][startRowIndex] = "Отклонение";
+                worksheet.Cells[6][startRowIndex] = "Цена";
+                worksheet.Cells[7][startRowIndex] = "Стоимость фактическая";
+                worksheet.Cells[8][startRowIndex] = "Стоимость учётная";
                 startRowIndex++;
-            }
-            startRowIndex += 2;
+
+                foreach (var inventoryModel in InventoryModels)
+                {
+                    worksheet.Cells[1][startRowIndex] = inventoryModel.IceCream.Id;
+                    worksheet.Cells[2][startRowIndex] = inventoryModel.IceCream.Name;
+                    worksheet.Cells[3][startRowIndex] = inventoryModel.FactAmount;
+                    worksheet.Cells[4][startRowIndex] = inventoryModel.BuhAmount;
+                    worksheet.Cells[5][startRowIndex] = inventoryModel.Deviation;
+                    worksheet.Cells[6][startRowIndex] = inventoryModel.Price;
+                    worksheet.Cells[7][startRowIndex] = inventoryModel.FactTotalPrice;
+                    worksheet.Cells[8][startRowIndex] = inventoryModel.BuhTotalPrice;
+                    startRowIndex++;
+                }
+                startRowIndex += 2;
 
 
-            worksheet.Cells[5][startRowIndex] = "Сумма фактическая:";
-            worksheet.Cells[6][startRowIndex].Formula = $"=SUM(G{2}:" + $"G{startRowIndex - 3})";
-            worksheet.Cells[7][startRowIndex] = "Сумма учётная:";
-            worksheet.Cells[8][startRowIndex].Formula = $"=SUM(H{2}:" + $"H{startRowIndex - 3})";
-            worksheet.Cells[5][startRowIndex].Font.Bold = worksheet.Cells[7][startRowIndex].Font.Bold = true;
-            Excel.Range rangeBorders = worksheet.Range[worksheet.Cells[1][1], worksheet.Cells[8][startRowIndex - 3]];
-            rangeBorders.Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle =
-            rangeBorders.Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle =
-            rangeBorders.Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle =
-            rangeBorders.Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle =
-            rangeBorders.Borders[Excel.XlBordersIndex.xlInsideHorizontal].LineStyle =
-            rangeBorders.Borders[Excel.XlBordersIndex.xlInsideVertical].LineStyle = Excel.XlLineStyle.xlContinuous;
+                worksheet.Cells[5][startRowIndex] = "Сумма фактическая:";
+                worksheet.Cells[6][startRowIndex].Formula = $"=SUM(G{2}:" + $"G{startRowIndex - 3})";
+                worksheet.Cells[7][startRowIndex] = "Сумма учётная:";
+                worksheet.Cells[8][startRowIndex].Formula = $"=SUM(H{2}:" + $"H{startRowIndex - 3})";
+                worksheet.Cells[5][startRowIndex].Font.Bold = worksheet.Cells[7][startRowIndex].Font.Bold = true;
+                Excel.Range rangeBorders = worksheet.Range[worksheet.Cells[1][1], worksheet.Cells[8][startRowIndex - 3]];
+                rangeBorders.Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle =
+                rangeBorders.Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle =
+                rangeBorders.Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle =
+                rangeBorders.Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle =
+                rangeBorders.Borders[Excel.XlBordersIndex.xlInsideHorizontal].LineStyle =
+                rangeBorders.Borders[Excel.XlBordersIndex.xlInsideVertical].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-            worksheet.Columns.AutoFit();
-            application.Visible = true;
+                worksheet.Columns.AutoFit();
+                application.Visible = true;
+            });
+        }
+        private async void Spend_Click(object sender, RoutedEventArgs e)
+        {
+            Task messageTask = Task.Run(() => MessageBox.Show("Отчёт создаётся...", "Подождите", MessageBoxButton.OK, MessageBoxImage.Information));
+            Task exportTask = Export();
+            await Task.Run(() => Task.WaitAll(messageTask, exportTask));
         }
 
     }
