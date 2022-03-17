@@ -10,8 +10,10 @@
     <Grid>
         <Button x:Name="Kassa" Content="Касса" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="300" Click="Kassa_Click"/>
         <Button x:Name="Inventarization" Content="Инвентаризация" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top" Width="300" Click="Inventarization_Click"/>
-        <Button x:Name="ProductsControl" Content="Управление продукцией" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Width="300" Click="ProductsControl_Click"/>
+        <Button x:Name="ProductsControl" Content="Управление продукцией" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Width="300" Click="ProductsControl_Click" Cursor="Hand"/>
+        <Button x:Name="EmployeesControl" Content="Управление сотрудниками" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" Width="300" Click="EmployeesControl_Click" Cursor="Hand"/>
         <Button x:Name="Exit" Content="Выход" HorizontalAlignment="Left" Margin="10,5,0,5" VerticalAlignment="Bottom" Width="300" Click="Exit_Click"/>
+        <Button x:Name="Statistics" Content="Статистика продаж" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="300" Click="Statistics_Click" Cursor="Hand"/>
 
     </Grid>
 </local:BaseWindow>

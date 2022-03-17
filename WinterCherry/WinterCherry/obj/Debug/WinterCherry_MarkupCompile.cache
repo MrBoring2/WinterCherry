@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\App.xaml
-91532281257
+121434412620
 
-351671239640
-241486811697
-Windows\AdministratorWindow.xaml;Windows\AmountIceCream.xaml;Windows\DeliveryToShopWindow.xaml;Windows\DeliveryToStorageWindow.xaml;Windows\IceCreamWindow.xaml;Windows\InventoryWindow.xaml;Windows\LoginWindow.xaml;Windows\CheckoutWindow.xaml;Windows\ProductsControl.xaml;
+38-12856293
+26111769566
+Windows\AdministratorWindow.xaml;Windows\AmountIceCream.xaml;Windows\DeliveryToShopWindow.xaml;Windows\DeliveryToStorageWindow.xaml;Windows\EmployeesListWindow.xaml;Windows\EmployeeWindow.xaml;Windows\IceCreamWindow.xaml;Windows\InventoryWindow.xaml;Windows\LoginWindow.xaml;Windows\CheckoutWindow.xaml;Windows\ProductsControl.xaml;Windows\StatisticsWindow.xaml;
 
 False
 

@@ -52,5 +52,19 @@ namespace WinterCherry.Windows
             loginWindow.Show();
             this.Close();
         }
+
+        private void Statistics_Click(object sender, RoutedEventArgs e)
+        {
+            var statisticsWindow = new StatisticsWindow();
+            statisticsWindow.Show();
+            this.Close();
+        }
+
+        private void EmployeesControl_Click(object sender, RoutedEventArgs e)
+        {
+            var employeesWindow = new EmployeesListWindow(false);
+            employeesWindow.Show();
+            this.Close();
+        }
     }
 }

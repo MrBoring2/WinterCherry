@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WinterCherry.Windows"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="Инвентаризация" Height="500" Width="1300" MinWidth="1300" MinHeight="500" Icon="/WinterCherry;component/Resources/logo.ico">
+        Title="Инвентаризация" Height="500" Width="1300" MinWidth="1300" MinHeight="500" Icon="/WinterCherry;component/Resources/logo.ico" RenderOptions.BitmapScalingMode="HighQuality">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="45*"/>

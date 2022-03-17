@@ -8,7 +8,7 @@
         xmlns:mde="https://spiegelp.github.io/MaterialDesignExtensions/winfx/xaml"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Поставка на склад" Height="650" MinHeight="650" Width="1250" MinWidth="1250" Icon="/WinterCherry;component/Resources/logo.ico">
+        Title="Поставка на склад" Height="650" MinHeight="650" Width="1250" MinWidth="1250" Icon="/WinterCherry;component/Resources/logo.ico" RenderOptions.BitmapScalingMode="HighQuality">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50*"/>

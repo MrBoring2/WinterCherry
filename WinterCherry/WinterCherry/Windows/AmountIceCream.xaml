@@ -8,7 +8,7 @@
         xmlns:mde="https://spiegelp.github.io/MaterialDesignExtensions/winfx/xaml"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Количество мороженого" Height="148.5" Width="341" Icon="/WinterCherry;component/Resources/logo.ico">
+        Title="Количество мороженого" Height="148.5" Width="341" Icon="/WinterCherry;component/Resources/logo.ico" RenderOptions.BitmapScalingMode="HighQuality">
     <Grid>
         <TextBox FontSize="16" HorizontalAlignment="Left" Height="31" Margin="10,32,0,0" TextWrapping="Wrap" Text="{Binding Amount}" material:HintAssist.Hint="Введите количество мороженого..."  VerticalAlignment="Top" Width="315"/>
         <Button x:Name="OK" Content="ОК" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="115" Click="OK_Click"/>

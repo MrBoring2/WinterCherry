@@ -8,9 +8,9 @@
         xmlns:mde="https://spiegelp.github.io/MaterialDesignExtensions/winfx/xaml"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Авторизация" Height="450" Width="372" Icon="/WinterCherry;component/Resources/logo.ico" >
+        Title="Авторизация" Height="450" Width="372" Icon="/WinterCherry;component/Resources/logo.ico" RenderOptions.BitmapScalingMode="HighQuality">
     <Grid>
-        <Image HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" Width="170" Height="170" Source="/WinterCherry;component/Resources/logo.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" Width="170" Height="170" Source="/WinterCherry;component/Resources/logo.png" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
         <Button x:Name="Enter" FontSize="16" Content="Войти" HorizontalAlignment="Center" Margin="0,320,0,0" VerticalAlignment="Top" Width="170" Click="Enter_Click"/>
         <TextBox HorizontalAlignment="Center" FontSize="16" Height="30" Margin="98,230,98,0"  Text="{Binding Login}" material:HintAssist.Hint="Логин" VerticalAlignment="Top" Width="170"/>
         <PasswordBox x:Name="passwordText" FontSize="16" HorizontalAlignment="Center" Height="30" Margin="0,275,0,0"  material:HintAssist.Hint="Пароль" VerticalAlignment="Top" Width="170"/>

@@ -88,6 +88,7 @@ namespace WinterCherry.Windows
                     InventoryModels.Add(inventoryModel);
                     FactTotalPrice = InventoryModels.Sum(p => p.FactTotalPrice);
                     BuhTotalPrice = InventoryModels.Sum(p => p.BuhTotalPrice);
+                    InventoryModels = new ObservableCollection<InventoryModel>(InventoryModels.OrderBy(p => p.IceCream.Id));
                 }
                 else
                 {
@@ -106,6 +107,8 @@ namespace WinterCherry.Windows
         {
             if (SelectedInventoryModel != null)
             {
+                FactTotalPrice -= SelectedInventoryModel.FactTotalPrice;
+                BuhTotalPrice -= SelectedInventoryModel.BuhTotalPrice;
                 InventoryModels.Remove(SelectedInventoryModel);
             }
             else
@@ -170,13 +173,21 @@ namespace WinterCherry.Windows
                 worksheet.Columns.AutoFit();
                 application.Visible = true;
             });
+
         }
         private async void Spend_Click(object sender, RoutedEventArgs e)
         {
-            Task messageTask = Task.Run(() => MessageBox.Show("Отчёт создаётся...", "Подождите", MessageBoxButton.OK, MessageBoxImage.Information));
-            Task exportTask = Export();
-            await Task.Run(() => Task.WaitAll(messageTask, exportTask));
-        }
 
+            if (InventoryModels.Count > 0)
+            {
+                Task messageTask = Task.Run(() => MessageBox.Show("Отчёт создаётся...", "Подождите", MessageBoxButton.OK, MessageBoxImage.Information));
+                Task exportTask = Export();
+                await Task.Run(() => Task.WaitAll(messageTask, exportTask));
+            }
+            else
+            {
+                MessageBox.Show("Выберите товары для инвентаризации!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
     }
 }

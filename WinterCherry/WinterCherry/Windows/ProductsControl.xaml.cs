@@ -505,5 +505,19 @@ namespace WinterCherry.Windows
         {
             this.DialogResult = false;
         }
+
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            if (SelectedIceCream != null)
+            {
+                using (var db = new WinterCherryContext())
+                {
+                    db.IceCream.Remove(db.IceCream.FirstOrDefault(p=>p.Id == SelectedIceCream.Id));
+                    db.SaveChanges();
+                    LoadIceCreams();
+                    MessageBox.Show("Мороженое успешно удалено!", "Опопвещение", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+        }
     }
 }

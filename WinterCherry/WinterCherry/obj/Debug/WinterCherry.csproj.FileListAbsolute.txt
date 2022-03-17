@@ -116,3 +116,16 @@ C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\WinterChe
 C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\WinterCherry.csproj.CopyComplete
 C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\WinterCherry.exe
 C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\WinterCherry.pdb
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\WinterCherry.csproj.SuggestedBindingRedirects.cache
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\bin\Debug\LiveCharts.dll
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\bin\Debug\LiveCharts.pdb
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\bin\Debug\LiveCharts.xml
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\Windows\StatisticsWindow.g.cs
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\Windows\StatisticsWindow.baml
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\Windows\EmployeesListWindow.g.cs
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\Windows\EmployeesListWindow.baml
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\Windows\EmployeeWindow.g.cs
+C:\Users\MrBoring\GIT\WinterCherry\WinterCherry\WinterCherry\obj\Debug\Windows\EmployeeWindow.baml

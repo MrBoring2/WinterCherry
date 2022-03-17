@@ -7,7 +7,7 @@ namespace WinterCherry.Data
     using System.Data.Entity.Spatial;
 
     [Table("Employee")]
-    public partial class Employee
+    public partial class Employee : BaseEntity
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Employee()

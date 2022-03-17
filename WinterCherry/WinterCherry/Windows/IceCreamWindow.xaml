@@ -8,7 +8,7 @@
         mc:Ignorable="d" ResizeMode="NoResize"
         xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:mde="https://spiegelp.github.io/MaterialDesignExtensions/winfx/xaml"
-        Title="Карточка мороженого" Height="514.5" Width="476" Icon="/WinterCherry;component/Resources/logo.ico">
+        Title="Карточка мороженого" Height="514.5" Width="476" Icon="/WinterCherry;component/Resources/logo.ico" RenderOptions.BitmapScalingMode="HighQuality">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="361*"/>

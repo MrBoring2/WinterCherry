@@ -91,7 +91,7 @@ namespace WinterCherry.Windows
         private bool Validate()
         {
             return !string.IsNullOrEmpty(IceCreamName) &&
-                double.TryParse(Weight.ToString(), out double w) &&
+                (double.TryParse(Weight.ToString(), out double w) && w > 0) &&
                 decimal.TryParse(Price.ToString(), out decimal p) &&
                 Price > 0;
         }
